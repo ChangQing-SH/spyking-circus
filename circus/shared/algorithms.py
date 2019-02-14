@@ -98,7 +98,7 @@ def find_centroids_and_cluster(dist, rho, delta, n_min, alpha=3):
     
     # assigning points to clusters based on their distance to the centroids
     if nclus <= 1:
-        labels = numpy.ones(npnts)
+        labels = numpy.ones(npnts, dtype=numpy.int32)
     else:
         centersx = numpy.where(centers)[0] # index of centroids
         dist2cent = dist[centersx, :]
